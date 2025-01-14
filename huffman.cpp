@@ -79,6 +79,12 @@ void encode(const char* inputFile, const char* outputFile) {
         }
     }
 
+    if (n == 1) {
+        forest[n].weight = 0;
+        forest[n].root = n;
+        n++;
+    }
+
     int forest_size = n;
     int tree_size = n;
     int p1, p2;
